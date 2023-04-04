@@ -23,18 +23,16 @@ class Queue(AbstractQueue):
     def search(self, index):
         """Aqui irá sua implementação"""
         try:
-            if (
-                (index + 1) > len(self._queue)
-                or index < 0
-                or len(self._queue) == 0
-            ):
-                print(index + 1, len(self._queue))
+            if index < 0:
                 raise IndexError
             return self._queue[index]
         except IndexError:
-            raise IndexError("Índice Inválido ou Inexistente")
+            raise IndexError('Índice Inválido ou Inexistente')
 
 
 # q = Queue()
-# queue = Queue()
-# print(queue.search(-1))
+# q.enqueue(42)
+
+
+# print(q.search(-1))
+
