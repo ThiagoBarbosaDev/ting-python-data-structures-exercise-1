@@ -28,11 +28,3 @@ class Queue(AbstractQueue):
             return self._queue[index]
         except IndexError:
             raise IndexError('Índice Inválido ou Inexistente')
-
-
-# q = Queue()
-# q.enqueue(42)
-
-
-# print(q.search(-1))
-
